@@ -1,0 +1,91 @@
+.design-development {
+  padding-top: 80px;
+  background-color: #F7F7FA;
+  border-bottom: 1px solid #E7DAED;
+  border-top: 1px solid #E7DAED;
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+.design-development .line-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.design-development .line-header h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+.design-development .line-header .second-header {
+  font-weight: bold;
+}
+
+.development-content {
+  display: flex;
+  padding-top: 100px;
+  gap: 40px;
+  padding-inline: 100px;
+}
+.development-content .left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.development-content .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.development-content .development-card {
+  display: flex;
+  background-color: #FAFAFA;
+  border: 1px solid #E7DAED;
+  padding: 40px;
+  gap: 20px;
+}
+.development-content .development-card .title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.development-content .development-card .title-text h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A202C;
+}
+.development-content .development-card .title-text p {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #4A5568;
+}
+.development-content .dev-img.img-0 img {
+  background-image: linear-gradient(to top, #29272E, #27272E);
+  border-radius: 10px;
+  padding: 10px;
+}
+.development-content .dev-img.img-1 img {
+  background-image: linear-gradient(to top, #FF92AE, #FF3D9A);
+  border-radius: 10px;
+  padding: 10px;
+}
+.development-content .dev-img.img-2 img {
+  background-image: linear-gradient(to top, #FFEF5E, #F7936F);
+  border-radius: 10px;
+  padding: 10px;
+}
+.development-content .dev-img.img-3 img {
+  background-image: linear-gradient(to top, #68DBF2, #509CF5);
+  border-radius: 10px;
+  padding: 10px;
+}
+.development-content .dev-img.img-4 img {
+  background-image: linear-gradient(to top, #67E9F1, #24E795);
+  border-radius: 10px;
+  padding: 10px;
+}
+.development-content .dev-img.img-5 img {
+  background-image: linear-gradient(to bottom, #F76680, #57007B);
+  border-radius: 10px;
+  padding: 10px;
+}/*# sourceMappingURL=dev.css.map */

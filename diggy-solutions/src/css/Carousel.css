@@ -1,0 +1,165 @@
+.line{
+  display: flex;
+  justify-content: center;
+
+}
+
+.carousel{
+ padding-top: 120px;
+
+}
+.carousel_wrapper h1{
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.carousel_wrapper .second-h1{
+  font-weight: bold;
+}
+
+.carousel_wrapper p{
+  font-size: 18px;
+  font-weight: 400;
+  padding-inline: 400px;
+  text-align: center;
+  line-height: 36px;
+  color: #718096;
+ 
+ 
+}
+
+.carousel .colon-1{
+  position: absolute;
+  padding-top: 150px;
+  padding-left: 350px;
+}
+
+.carousel .colon-2{
+   
+ 
+  padding-right: 320px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -180px;
+  
+}
+
+.carousel_card {
+   display: flex; 
+ 
+   flex-direction: column;
+  flex: 1;
+  position: absolute;
+  
+  overflow: hidden;
+
+  /* -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.15); */
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: 0.5s ease-in-out;
+  padding-top: 20px;
+  gap: 40px;
+
+}
+
+.carousel_card-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: visible;
+}
+
+
+
+
+
+.card_title {
+  /* color: white; */
+  font-size: 30px;
+}
+
+.carousel_arrow_left {
+  align-items: center;
+  padding-left: 90px;
+  padding-top: 280px;
+  cursor: pointer;
+ 
+}
+
+.carousel_arrow_right {
+  padding-left: 90%;
+  cursor: pointer;
+  position: relative;
+  top: -90px;
+
+ 
+}
+
+
+
+/* .carousel_arrow_left {
+  left: -40%;
+}
+.carousel_arrow_right {
+  right: -40%;
+} */
+
+
+
+.carousel_pagination {
+  /* position: relative;
+  bottom: -100px;
+  left: 65%;
+  transform: translate(-50%, 0); */
+  display: flex;
+  padding-inline: 20px;
+  justify-content: center;
+  /* padding-top: 20px; */
+}
+
+.pagination_dot {
+  
+  cursor: pointer;
+  
+}
+
+.pagination_dot:hover {
+  transform: scale(1.2);
+}
+
+.pagination_dot-active {
+  background-color: steelblue;
+}
+
+.carousel_pagination .pagination_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-left: 100px;
+ 
+}
+
+.carousel_pagination .pagination_item h2{
+  color: #A0AEC0;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.carousel_pagination .pagination_item p{
+  color: #E2E8F0;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 25px;
+ 
+}
+
+/* @media (min-width: 1760px) {
+  .carousel_pagination {
+    left: 60%;
+  }
+} */
