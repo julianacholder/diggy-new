@@ -21,20 +21,11 @@
 }
 
 .development-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   padding-top: 100px;
   gap: 40px;
   padding-inline: 100px;
-}
-.development-content .left-side {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.development-content .right-side {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 .development-content .development-card {
   display: flex;
@@ -88,4 +79,43 @@
   background-image: linear-gradient(to bottom, #F76680, #57007B);
   border-radius: 10px;
   padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .development-content {
+    padding-inline: 20px;
+    gap: 20px;
+  }
+  .development-content .development-card {
+    padding: 20px;
+  }
+}
+@media (max-width: 745px) {
+  .development-content {
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+  }
+  .design-development .line-header {
+    gap: 9px;
+  }
+  .design-development .line-header h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 490px) {
+  .design-development .line-header h1 {
+    font-size: 25px;
+  }
+  .development-content .development-card {
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .development-content .development-card .title-text h1 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .development-content {
+    padding-inline: 0px;
+  }
 }/*# sourceMappingURL=dev.css.map */

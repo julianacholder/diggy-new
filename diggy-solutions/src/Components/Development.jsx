@@ -18,7 +18,7 @@ function Development({ development }) {
         </div>
 
         <div className='development-content'>
-          <div className='left-side'>
+          
             {leftSide.map((dev, index) => (
               <div key={index} className='development-card'>
                 <div className={`dev-img img-${index}`}>
@@ -30,10 +30,9 @@ function Development({ development }) {
                 </div>
               </div>
             ))}
-          </div>
+            
 
-          <div className='right-side'>
-            {rightSide.map((dev, index) => (
+{rightSide.map((dev, index) => (
               <div key={index} className='development-card'>
                 <div className={`dev-img img-${index + leftSide.length}`}>
                   <img src={dev.image} alt={dev.title} />
@@ -45,7 +44,10 @@ function Development({ development }) {
               </div>
             ))}
           </div>
-        </div>
+         
+
+        
+       
       </section>
     </>
   );

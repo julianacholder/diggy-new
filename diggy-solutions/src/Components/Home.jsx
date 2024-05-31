@@ -1,4 +1,5 @@
 import React from 'react'
+import  { useEffect } from 'react';
 import Slider from "react-slick";
 import "./Navbar";
 import "../css/home.css";
@@ -8,17 +9,56 @@ import Carousel from "./Carousel"
 import { testcard } from "./Data";
 import { development } from "./Data";
 import Development from './Development';
-import Footer from "./Footer"
+import Footer from "./Footer";
+import Logos from './Logos';
+
+
 
 
 function Home() {
+  useEffect(() => {
+    const logosSlide = document.querySelector(".img-readmore");
+    const copy = logosSlide.cloneNode(true);
+    document.querySelector(".slider-image").appendChild(copy);
+  }, []);
+
+  
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: true, // Change to true for infinite looping
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // 3 seconds
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
+  
   return (
     <>
       <section className='hero-section'>
@@ -40,9 +80,10 @@ function Home() {
       <img src="/ball.png" alt="" />
       </div>
 
+
       <section className='services'>
        <h2 className='services-header'>Services we offer</h2>
-       <div className="components">
+       <div className="components slider-container">
        <Slider {...settings}>
        <div className='text-card'>
         <img src="/image1.png" alt="" />
@@ -57,7 +98,7 @@ function Home() {
         <img src="/image1.png" alt="" />
         <h1>Software Testing Service</h1>
         <p>A Website is an extension of yourself and we 
-          <br />can help you to express it properly.
+          can help you to express it properly.
            Your website is your number one marketing asset
             because we live in a digital age.</p>
        </div>
@@ -66,7 +107,7 @@ function Home() {
         <img src="/image1.png" alt="" />
         <h1>Mobile App Development</h1>
         <p>A Website is an extension of yourself and we 
-          <br />can help you to express it properly.
+          can help you to express it properly.
            Your website is your number one marketing asset
             because we live in a digital age.</p>
        </div>
@@ -75,7 +116,7 @@ function Home() {
         <img src="/image1.png" alt="" />
         <h1>Business Consultancy</h1>
         <p>A Website is an extension of yourself and we 
-          <br />can help you to express it properly.
+          can help you to express it properly.
            Your website is your number one marketing asset
             because we live in a digital age.</p>
        </div>
@@ -84,13 +125,19 @@ function Home() {
         <img src="/image1.png" alt="" />
         <h1>Web Design & Development</h1>
         <p>A Website is an extension of yourself and we 
-          <br />can help you to express it properly.
+          can help you to express it properly.
            Your website is your number one marketing asset
             because we live in a digital age.</p>
        </div>
        </Slider>
        </div>
-      </section>
+      </section> 
+
+      
+
+     
+
+
 
       <section>
       <div className='ball2'>
@@ -118,7 +165,9 @@ function Home() {
 
          
       </div>
-      <img src="/About-us-Video.png" alt="" />
+       <div className='trust'>
+      <img  className="responsive"  src="/About-us-Video.png" alt="" />
+      </div>
       </div>
       </section>
 
@@ -136,21 +185,12 @@ function Home() {
       </div>
 
       <p className='arrows'>
-        <img src="/Btn-left.png" alt="" />
-        <img className='btn-right'  src="/Vector.png" alt="" />
+      
       </p>
 
-   
+      <Logos />
       </section>
-      <div className="people">
-        <img src="/logo1.png" alt="" />
-        <img src="/logo2.png" alt="" />
-        <img src="/logo3.png" alt="" />
-        <img src="/logo4.png" alt="" />
-        <img src="/logo5.png" alt="" />
-        <img src="/logo5.png" alt="" />
-        <img src="/logo2.png" alt="" />
-      </div>
+    
 
       <Carousel testimony={testcard} />
 
@@ -168,7 +208,9 @@ function Home() {
 
         <div className='projects-text'>
           <div className='project-card'>
+          <div className='card-img'>
             <img src="/images/project1.png" alt="" />
+            </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
             <p>Born out of a vision, a single-minded objective 
@@ -186,7 +228,9 @@ function Home() {
           </div>
 
           <div className='project-card2'>
+            <div className='card-img'>
             <img src="/images/project2.png" alt="" />
+            </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
             <p>Born out of a vision, a single-minded objective 
@@ -203,7 +247,9 @@ function Home() {
             </div>
           </div>
           <div className='project-card3'>
+          <div className='card-img'>
             <img src="/images/project3.png" alt="" />
+            </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
             <p>Born out of a vision, a single-minded objective 
@@ -262,13 +308,13 @@ function Home() {
             </div>
           </div>
 
-          <div>
+          <div className='team-img'>
             <img src="/images/team1.png" alt="" />
           </div>
         </div>
 
         <div className="team-text">
-        <div>
+        <div className='team-img'>
             <img src="/images/team2.png" alt="" />
           </div>
           <div className="team-content">
@@ -328,7 +374,7 @@ function Home() {
             </div>
           </div>
 
-          <div>
+          <div className='team-img'>
             <img src="/images/team3.png" alt="" />
           </div>
         </div>
@@ -349,11 +395,15 @@ function Home() {
           <h5>Backend</h5>
           <img src="/images/tech-line.png" alt="" />
           </div>
+          <div className='tech1'>
           <h5>Frontend</h5>
           <h5>Databases</h5>
+          </div>
+           <div className='tech2'>
           <h5>CMS</h5>
           <h5>CloudTesting</h5>
           <h5>DevOps</h5>
+          </div>
         </div>
 
         <div className='tech-img'>
@@ -429,7 +479,7 @@ function Home() {
 
       <div className='slider-image'>
         <div className="img-readmore">
-          <img src="/images/feature1.png" alt="" />
+          <img  className='slide-image' src="/images/feature1.png" alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
@@ -439,7 +489,7 @@ function Home() {
         </div>
       
         <div className="img-readmore">
-        <img src="/images/feature2.png" alt="" />
+        <img className='slide-image' src="/images/feature2.png" alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
@@ -449,7 +499,7 @@ function Home() {
         </div>
 
         <div className="img-readmore">
-        <img src="/images/feature3.png" alt="" />
+        <img className='slide-image' src="/images/feature3.png" alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
@@ -459,7 +509,7 @@ function Home() {
         </div>
 
         <div className="img-readmore">
-        <img src="/images/feature4.png" alt="" />
+        <img className='slide-image' src="/images/feature4.png" alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
@@ -468,8 +518,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="img-readmore">
-        <img src="/images/feature5.png" alt="" />
+        <div  className="img-readmore">
+        <img  className='slide-image'src="/images/feature5.png" alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
