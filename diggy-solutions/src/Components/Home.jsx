@@ -1,7 +1,7 @@
 import React from 'react'
 import  { useEffect } from 'react';
 import Slider from "react-slick";
-import "./Navbar";
+import Navbar from './Navbar';
 import "../css/home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,11 +11,12 @@ import { development } from "./Data";
 import Development from './Development';
 import Footer from "./Footer";
 import Logos from './Logos';
+import hero from "../img/hero.png"
 
 
 
 
-function Home() {
+const Home = () => {
   useEffect(() => {
     const logosSlide = document.querySelector(".img-readmore");
     const copy = logosSlide.cloneNode(true);
@@ -61,6 +62,7 @@ function Home() {
   
   return (
     <>
+    <Navbar/>
       <section className='hero-section'>
         <div className='hero-text'>
           <div>
@@ -74,7 +76,7 @@ function Home() {
 
         <a href="">Let's get started</a>
         </div>
-      <img src="/hero.png" alt="" />
+      <img src={hero} alt="" />
       </section>
       <div className='ball'>
       <img src="/ball.png" alt="" />
