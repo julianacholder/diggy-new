@@ -11,7 +11,7 @@ import { development } from "./Data";
 import Development from './Development';
 import Footer from "./Footer";
 import Logos from './Logos';
-import hero from "../img/hero.png"
+import hero from "../images/hero.png"
 
 
 
