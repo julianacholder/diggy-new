@@ -1,18 +1,40 @@
 {
   "files": {
-    "main.css": "/diggy-new/static/css/main.a6599919.css",
-    "main.js": "/diggy-new/static/js/main.9988bcf0.js",
+    "main.css": "/diggy-new/static/css/main.aca5d066.css",
+    "main.js": "/diggy-new/static/js/main.2f99c266.js",
+    "static/media/team1.png": "/diggy-new/static/media/team1.b3609f8b5194ac54dadb.png",
+    "static/media/team2.png": "/diggy-new/static/media/team2.b9886328aa4e92d58846.png",
+    "static/media/team3.png": "/diggy-new/static/media/team3.7c026d2f5a318bbb65b7.png",
+    "static/media/About-us-Video.png": "/diggy-new/static/media/About-us-Video.b107bb6c68aeb7ea8034.png",
+    "static/media/project3.png": "/diggy-new/static/media/project3.03723442505f0078f519.png",
     "static/media/hero.png": "/diggy-new/static/media/hero.531e69a149b44413015c.png",
+    "static/media/project2.png": "/diggy-new/static/media/project2.e17a00c20dee3fb5eb9a.png",
+    "static/media/project1.png": "/diggy-new/static/media/project1.61c652e073a0d94765a4.png",
+    "static/media/feature1.png": "/diggy-new/static/media/feature1.9d3df2ab964a0938d50b.png",
+    "static/media/feature3.png": "/diggy-new/static/media/feature3.0dc17082e2841dee731b.png",
+    "static/media/feature2.png": "/diggy-new/static/media/feature2.27c0944e4ffe90ed8ae1.png",
+    "static/media/feature4.png": "/diggy-new/static/media/feature4.c90026e28ac12836a0a0.png",
+    "static/media/feature5.png": "/diggy-new/static/media/feature5.aa07672136cfc412b019.png",
+    "static/media/stack.png": "/diggy-new/static/media/stack.8a2b7ed96be9c5dd1e0a.png",
+    "static/media/person5.png": "/diggy-new/static/media/person5.66ab0462eb442766f0ed.png",
+    "static/media/person2.png": "/diggy-new/static/media/person2.b92ed24fd92a1be2529c.png",
+    "static/media/person1.png": "/diggy-new/static/media/person1.79bb9c37a8a32df71fd0.png",
+    "static/media/person4.png": "/diggy-new/static/media/person4.db9e939775d20b3a0aae.png",
+    "static/media/person3.png": "/diggy-new/static/media/person3.41132e34cadc84959525.png",
+    "static/media/logo3.png": "/diggy-new/static/media/logo3.43d14f5abc9f9981f89c.png",
+    "static/media/logo4.png": "/diggy-new/static/media/logo4.d4d2bdeebeb92fde9c2d.png",
+    "static/media/logo2.png": "/diggy-new/static/media/logo2.45426347b112ea3a91b1.png",
+    "static/media/logo.png": "/diggy-new/static/media/logo.637e955bc188ab982535.png",
     "static/media/slick.svg": "/diggy-new/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/diggy-new/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/diggy-new/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/diggy-new/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/diggy-new/index.html",
-    "main.a6599919.css.map": "/diggy-new/static/css/main.a6599919.css.map",
-    "main.9988bcf0.js.map": "/diggy-new/static/js/main.9988bcf0.js.map"
+    "main.aca5d066.css.map": "/diggy-new/static/css/main.aca5d066.css.map",
+    "main.2f99c266.js.map": "/diggy-new/static/js/main.2f99c266.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6599919.css",
-    "static/js/main.9988bcf0.js"
+    "static/css/main.aca5d066.css",
+    "static/js/main.2f99c266.js"
   ]
 }
