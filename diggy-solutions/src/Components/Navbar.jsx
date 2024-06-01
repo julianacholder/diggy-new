@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import "../css/main.css";
 import "../css/navbar.css"
+import logo from "../images/logo.png"
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +32,7 @@ function Navbar() {
     <>
       <header className={`header ${isScrolled || isMenuOpen ? 'scrolled' : ''}`}>
       <div className="navbar-container" >
-        <img src="/logo.png" alt="" />
+        <img src={logo} alt="" />
 
        
         <ul className={`nav-menu ${isMenuOpen ? 'responsive' : ''}`}>

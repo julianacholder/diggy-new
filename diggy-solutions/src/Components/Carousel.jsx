@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import "../css/Carousel.css";
-
+import decoline from "../images/Deco-line.png"
+import colon1 from "../images/colon1.png"
+import colon2 from "../images/colon2.png"
+import btnleft from "../images/Btn-left.png"
+import btnright from "../images/testimonyright.png"
 
 function Carousel({ testimony }) {
   const [current, setCurrent] = useState(0);
@@ -40,10 +44,10 @@ function Carousel({ testimony }) {
       
     >
        <div className="line">
-             <img src="/Deco-line.png" alt="" />
+             <img src={decoline} alt="" />
              </div>
              <div className="colon-1">
-             <img src="/colon1.png" alt="" />
+             <img src={colon1} alt="" />
              </div>
       <div className="carousel_wrapper">
         {testimony.map((test, index) => (
@@ -65,15 +69,15 @@ function Carousel({ testimony }) {
           </div>
         ))}
         <div className="carousel_arrow_left" onClick={slideLeft}>
-        <img src="/Btn-left.png" alt="" />
+        <img src={btnleft} alt="" />
         </div>
         <div className="carousel_arrow_right" onClick={slideRight}>
-        <img src="/testimonyright.png" alt="" />
+        <img src={btnright} alt="" />
         </div>
        
       </div>
       <div className="colon-2">
-             <img src="/colon2.png" alt="" />
+             <img src={colon2} alt="" />
              </div>
       <div className="carousel_pagination">
           {testimony.map((test, index) => (

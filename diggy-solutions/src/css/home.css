@@ -2,6 +2,46 @@
   width: 100%;
 }
 
+.matters {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+h1 {
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 span {
+  display: none;
+}
+
+h1 span.text-in {
+  display: inline-block;
+  animation: textIn 0.5s ease;
+}
+
+h1 span.text-out {
+  animation: textOut 0.5s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .hero-section {
   display: flex;
   align-items: center;

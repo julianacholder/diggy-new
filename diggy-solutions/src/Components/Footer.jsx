@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/footer.css"
+import logo from "../images/logo.png"
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <div className="footer-text">
         <div className='extra'>
           <div>
-          <img src="/logo.png" alt="" />
+          <img src={logo} alt="" />
           </div>
           <p>Lorem Ipsum is simply dummy text <br />
             of the printing and typesetting industry. </p>

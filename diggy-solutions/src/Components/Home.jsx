@@ -1,5 +1,5 @@
 import React from 'react'
-import  { useEffect } from 'react';
+import  { useEffect, useState} from 'react';
 import Slider from "react-slick";
 import Navbar from './Navbar';
 import "../css/home.css";
@@ -12,9 +12,68 @@ import Development from './Development';
 import Footer from "./Footer";
 import Logos from './Logos';
 import hero from "../images/hero.png"
+import image1 from "../images/image1.png"
+import ball from "../images/ball.png"
+import decoline from "../images/Deco-line.png"
+import arrow from "../images/arrow.png"
+import Aboutus from "../images/About-us-Video.png"
+import Project1 from "../images/project1.png"
+import Project2 from "../images/project2.png"
+import Project3 from "../images/project3.png"
+import Readmore from "../images/read-more.png"
+import seemore from "../images/see-more.png"
+import line from "../images/line.png"
+import ceo from "../images/ceo.png"
+import team1 from "../images/team1.png"
+import team2 from "../images/team2.png"
+import team3 from "../images/team3.png"
+import techline from "../images/tech-line.png"
+import stack from "../images/stack.png"
+import howworks from "../images/how-works.png"
+import feature1 from "../images/feature1.png"
+import feature2 from "../images/feature2.png"
+import feature3 from "../images/feature3.png"
+import feature4 from "../images/feature4.png"
+import feature5 from "../images/feature5.png"
+import hire1 from "../images/hire1.png"
+import hire2 from "../images/hire2.png"
+import Ellipse from "../images/Ellipse.png"
 
+const HeroText = () => {
+  const txts = ["Product", "Results", "Service", "Success"];
+  const txtsLen = txts.length;
+  const [index, setIndex] = useState(0);
+  const textInTimer = 3000;
+  const textOutTimer = 2800;
 
+  useEffect(() => {
+    const animateText = () => {
+      setTimeout(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % txtsLen);
+      }, textInTimer);
+    };
+    animateText();
+  }, [index, txtsLen]);
 
+  useEffect(() => {
+    const outTimer = setTimeout(() => {
+      document.querySelector('.animate-text span.text-in')?.classList.add('text-out');
+    }, textOutTimer);
+
+    return () => {
+      clearTimeout(outTimer);
+    };
+  }, [index]);
+
+  return (
+    <div className="animate-text">
+     
+          <h1>Great <span  className="text-in">{txts[index]}</span> is </h1>
+          
+
+    </div>
+  );
+};
 
 const Home = () => {
   useEffect(() => {
@@ -23,15 +82,14 @@ const Home = () => {
     document.querySelector(".slider-image").appendChild(copy);
   }, []);
 
-  
   const settings = {
     dots: true,
-    infinite: true, // Change to true for infinite looping
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // 3 seconds
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -59,27 +117,28 @@ const Home = () => {
       }
     ]
   };
+
   
   return (
     <>
     <Navbar/>
       <section className='hero-section'>
-        <div className='hero-text'>
-          <div>
-          <h1>Great <span>Product</span> is </h1>
-          <h2>built by great <span>teams</span></h2>
-          </div>
+      <div className='hero-text'>
+        <div>
+      <HeroText />
+      <h2>built by great <span>teams</span></h2>
+      </div>
         <p>
         We help build and manage a team of world-class 
          developers <br />to bring your vision to life
         </p>
 
         <a href="">Let's get started</a>
-        </div>
+       </div>
       <img src={hero} alt="" />
       </section>
       <div className='ball'>
-      <img src="/ball.png" alt="" />
+      <img src={ball} alt="" />
       </div>
 
 
@@ -88,7 +147,7 @@ const Home = () => {
        <div className="components slider-container">
        <Slider {...settings}>
        <div className='text-card'>
-        <img src="/image1.png" alt="" />
+        <img src={image1} alt="" />
         <h1>Web Design & Development</h1>
         <p>A Website is an extension of yourself and we 
           can help you to express it properly.
@@ -97,7 +156,7 @@ const Home = () => {
        </div>
       
        <div className='text-card'>
-        <img src="/image1.png" alt="" />
+        <img src={image1}  alt="" />
         <h1>Software Testing Service</h1>
         <p>A Website is an extension of yourself and we 
           can help you to express it properly.
@@ -106,7 +165,7 @@ const Home = () => {
        </div>
 
        <div className='text-card'>
-        <img src="/image1.png" alt="" />
+        <img src={image1}  alt="" />
         <h1>Mobile App Development</h1>
         <p>A Website is an extension of yourself and we 
           can help you to express it properly.
@@ -115,7 +174,7 @@ const Home = () => {
        </div>
 
        <div className='text-card'>
-        <img src="/image1.png" alt="" />
+        <img src={image1}  alt="" />
         <h1>Business Consultancy</h1>
         <p>A Website is an extension of yourself and we 
           can help you to express it properly.
@@ -124,7 +183,7 @@ const Home = () => {
        </div>
 
        <div className='text-card'>
-        <img src="/image1.png" alt="" />
+        <img src={image1}  alt="" />
         <h1>Web Design & Development</h1>
         <p>A Website is an extension of yourself and we 
           can help you to express it properly.
@@ -143,14 +202,14 @@ const Home = () => {
 
       <section>
       <div className='ball2'>
-      <img src="/ball.png" alt="" />
+      <img src={ball}  alt="" />
       </div>
       <div className='text-vid'>
       <div className="trust-us">
         
         <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline}  alt="" />
         </div>
           <h1>Leading companies trust us
             <br />
@@ -162,13 +221,13 @@ const Home = () => {
            delivery of your project.</p>
            <div className='see-more'>
            <h5>See more Informations  </h5>
-           <img src="/arrow.png" alt="" />
+           <img src={arrow} alt="" />
            </div>
 
          
       </div>
        <div className='trust'>
-      <img  className="responsive"  src="/About-us-Video.png" alt="" />
+      <img  className="responsive"  src={Aboutus} alt="" />
       </div>
       </div>
       </section>
@@ -176,14 +235,14 @@ const Home = () => {
       <section className='meet-the-people'>
       <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline}  alt="" />
         </div>
           <h1>Meet the People
             <br />
              <span>We are Working With</span></h1>
         </div>
         <div className='ball3'>
-      <img src="/ball.png" alt="" />
+      <img src={ball} alt="" />
       </div>
 
       <p className='arrows'>
@@ -198,11 +257,11 @@ const Home = () => {
 
       <section className='projects'>
         <div className='small-ball'>
-        <img src="/images/Ellipse.png" alt="" />
+        <img src={Ellipse} alt="" />
         </div>
       <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline} alt="" />
         </div>
           <h1>Our recent</h1>
           <h1 className='second-header'>Projects</h1>
@@ -211,7 +270,7 @@ const Home = () => {
         <div className='projects-text'>
           <div className='project-card'>
           <div className='card-img'>
-            <img src="/images/project1.png" alt="" />
+            <img src={Project1} alt="" />
             </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
@@ -224,14 +283,14 @@ const Home = () => {
                in the shipping and freight forwarding industry.</p>
               <div className="read-more">
             <a href="">Read more</a>
-            <img src="/images/read-more.png" alt="" />
+            <img src={Readmore} alt="" />
             </div>
             </div>
           </div>
 
           <div className='project-card2'>
             <div className='card-img'>
-            <img src="/images/project2.png" alt="" />
+            <img src={Project2} alt="" />
             </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
@@ -244,13 +303,13 @@ const Home = () => {
                in the shipping and freight forwarding industry.</p>
                <div className="read-more">
             <a href="">Read more</a>
-            <img src="/images/read-more.png" alt="" />
+            <img src={Readmore} alt="" />
             </div>
             </div>
           </div>
           <div className='project-card3'>
           <div className='card-img'>
-            <img src="/images/project3.png" alt="" />
+            <img src={Project3} alt="" />
             </div>
             <div className='text-only'>
             <h1>Website Design for SCFC Liberia</h1>
@@ -263,13 +322,13 @@ const Home = () => {
                in the shipping and freight forwarding industry.</p>
                <div className="read-more">
             <a href="">Read more</a>
-            <img src="/images/read-more.png" alt="" />
+            <img src={Readmore} alt="" />
             </div>
             </div>
           </div>
           <div className='see-more'>
          <a href="">See more Projects</a>
-         <img className='see-more-img' src="/images/see-more.png" alt="" />
+         <img className='see-more-img' src={seemore} alt="" />
          </div>
         </div>
       </section>
@@ -277,7 +336,7 @@ const Home = () => {
       <section className='team'>
       <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline} alt="" />
         </div>
           <h1>Way of building</h1>
           <h1 className='second-header'>Great Software</h1>
@@ -292,7 +351,7 @@ const Home = () => {
                you cut costs and deliver within budget.</p>
 
             <div className='quote'>
-              <img src="/images/line.png" alt="" />
+              <img src={line} alt="" />
               <h5>"Simform is quick to identify larger problem with the
                 <br /> Software so we decided to 
                 expand our scope to build <br /> new modules"</h5>
@@ -300,7 +359,7 @@ const Home = () => {
 
             <div className='ceo-text'>
               <div>
-              <img src="/images/ceo.png" alt="" />
+              <img src={ceo} alt="" />
               </div>
               <div className='ceo-writing'>
               <h6>Jeewa markram</h6>
@@ -311,13 +370,13 @@ const Home = () => {
           </div>
 
           <div className='team-img'>
-            <img src="/images/team1.png" alt="" />
+            <img src={team1} alt="" />
           </div>
         </div>
 
         <div className="team-text">
         <div className='team-img'>
-            <img src="/images/team2.png" alt="" />
+            <img src={team2} alt="" />
           </div>
           <div className="team-content">
             <h1>Build the right team to scale</h1>
@@ -327,7 +386,7 @@ const Home = () => {
                you cut costs and deliver within budget.</p>
 
             <div className='quote'>
-              <img src="/images/line.png" alt="" />
+              <img src={line}alt="" />
               <h5>"Simform is quick to identify larger problem with the
                 <br /> Software so we decided to 
                 expand our scope to build <br /> new modules"</h5>
@@ -335,7 +394,7 @@ const Home = () => {
 
             <div className='ceo-text'>
               <div>
-              <img src="/images/ceo.png" alt="" />
+              <img src={ceo}alt="" />
               </div>
               <div className='ceo-writing'>
               <h6>Jeewa markram</h6>
@@ -358,7 +417,7 @@ const Home = () => {
                you cut costs and deliver within budget.</p>
 
             <div className='quote'>
-              <img src="/images/line.png" alt="" />
+              <img src={line} alt="" />
               <h5>"Simform is quick to identify larger problem with the
                 <br /> Software so we decided to 
                 expand our scope to build <br /> new modules"</h5>
@@ -366,7 +425,7 @@ const Home = () => {
 
             <div className='ceo-text'>
               <div>
-              <img src="/images/ceo.png" alt="" />
+              <img src={ceo} alt="" />
               </div>
               <div className='ceo-writing'>
               <h6>Jeewa markram</h6>
@@ -377,7 +436,7 @@ const Home = () => {
           </div>
 
           <div className='team-img'>
-            <img src="/images/team3.png" alt="" />
+            <img src={team3} alt="" />
           </div>
         </div>
       </section>
@@ -386,7 +445,7 @@ const Home = () => {
        <section className='tech-stack'>
        <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline} alt="" />
         </div>
           <h1>Our</h1>
           <h1 className='second-header'>Tech Stack</h1>
@@ -395,7 +454,7 @@ const Home = () => {
         <div className='tech-text'>
           <div className='tech-first'>
           <h5>Backend</h5>
-          <img src="/images/tech-line.png" alt="" />
+          <img src={techline} alt="" />
           </div>
           <div className='tech1'>
           <h5>Frontend</h5>
@@ -409,14 +468,14 @@ const Home = () => {
         </div>
 
         <div className='tech-img'>
-          <img src="/images/stack.png" alt="" />
+          <img src={stack} alt="" />
         </div>
        </section>
 
        <section className='how-works'>
        <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline} alt="" />
         </div>
           <h1>How development</h1>
           <h1 className='second-header'>through Diggy Solutions works</h1>
@@ -444,7 +503,7 @@ const Home = () => {
       
         </div>
         <div className='how-img'>
-            <img src="/images/how-works.png" alt="" />
+            <img src={howworks} alt="" />
           </div>
 
           <div className='how-works-content2'>
@@ -473,7 +532,7 @@ const Home = () => {
        <section className='features'>
        <div className='line-header'>
           <div>
-        <img src="/Deco-line.png" alt="" />
+        <img src={decoline} alt="" />
         </div>
           <h1>Featured</h1>
           <h1 className='second-header'>Resources</h1>
@@ -481,52 +540,52 @@ const Home = () => {
 
       <div className='slider-image'>
         <div className="img-readmore">
-          <img  className='slide-image' src="/images/feature1.png" alt="" />
+          <img  className='slide-image' src={feature1} alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
           </button>
-          <img src="/images/arrow.png" alt="" />
+          <img src={arrow} alt="" />
           </div>
         </div>
       
         <div className="img-readmore">
-        <img className='slide-image' src="/images/feature2.png" alt="" />
+        <img className='slide-image' src={feature2} alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
           </button>
-          <img src="/images/arrow.png" alt="" />
+          <img src={arrow} alt="" />
           </div>
         </div>
 
         <div className="img-readmore">
-        <img className='slide-image' src="/images/feature3.png" alt="" />
+        <img className='slide-image' src={feature3} alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
           </button>
-          <img src="/images/arrow.png" alt="" />
+          <img src={arrow} alt="" />
           </div>
         </div>
 
         <div className="img-readmore">
-        <img className='slide-image' src="/images/feature4.png" alt="" />
+        <img className='slide-image' src={feature4} alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
           </button>
-          <img src="/images/arrow.png" alt="" />
+          <img src={arrow} alt="" />
           </div>
         </div>
 
         <div  className="img-readmore">
-        <img  className='slide-image'src="/images/feature5.png" alt="" />
+        <img  className='slide-image'src={feature5} alt="" />
           <p>How to build a scalable business</p>
           <div className='feature-button'>
           <button>Read More
           </button>
-          <img src="/images/arrow.png" alt="" />
+          <img src={arrow} alt="" />
           </div>
         </div>
       </div>
@@ -540,11 +599,11 @@ const Home = () => {
           designers around!</h1>
            <div className='img-button'>
             <div>
-          <img src="/images/hire1.png" alt="" />
+          <img src={hire1} alt="" />
           </div>
           <button>Hire Top Developers</button>
           <div>
-          <img src="/images/hire2.png" alt="" />
+          <img src={hire2} alt="" />
           </div>
           </div>
         </div>
