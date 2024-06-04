@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/dev.css";
+import decoline from "../images/Deco-line.png"
 
 function Development({ development }) {
   // Divide the development array into two parts
@@ -11,7 +12,7 @@ function Development({ development }) {
       <section className='design-development'>
         <div className='line-header'>
           <div>
-            <img src="/Deco-line.png" alt="Deco Line" />
+            <img src={decoline} alt="Deco Line" />
           </div>
           <h1>Our design and</h1>
           <h1 className='second-header'>development approach</h1>
