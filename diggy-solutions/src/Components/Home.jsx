@@ -11,7 +11,7 @@ import { development } from "./Data";
 import Development from './Development';
 import Footer from "./Footer";
 import Logos from './Logos';
-import hero from "../images/hero.png"
+import hero from "../images/hero1.png"
 import image1 from "../images/image1.png"
 import ball from "../images/ball.png"
 import decoline from "../images/Deco-line.png"
@@ -122,9 +122,12 @@ const Home = () => {
   return (
     <>
     <Navbar/>
+ 
       <section className='hero-section'>
+       
       <div className='hero-text'>
         <div>
+      
       <HeroText />
       <h2>built by great <span>teams</span></h2>
       </div>
@@ -135,7 +138,12 @@ const Home = () => {
 
         <a href="">Let's get started</a>
        </div>
-      <img src={hero} alt="" />
+       <div className='hero-img'>
+       <div className='hero-ball'>
+          <img src={ball} alt="" />
+        </div>
+      <img src={hero} alt="" className='h-img'/>
+      </div>
       </section>
       <div className='ball'>
       <img src={ball} alt="" />
